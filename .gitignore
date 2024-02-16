@@ -1,0 +1,22 @@
+# Ignore image thumbnail files created by windows
+Thumbs.db
+# Ignore Finder view option files created by OS X
+.DS_Store
+# Ignore various files created by visual studio/msbuild
+*.ipch
+*.opensdf
+*.sdf
+*.suo
+*.vcxproj.user
+*.obj
+*.tlog
+*.VC.opendb
+*.VC.db
+.vs*/
+/Source/enc_temp_folder/
+# Ignore Visual Studio Code's working dir
+/.vscode/
+# Ignore files output by build
+/[Bb]uild*/
+/[Bb]inary*/
+/obj/
