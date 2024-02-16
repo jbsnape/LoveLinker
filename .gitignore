@@ -16,6 +16,7 @@ Thumbs.db
 /Source/enc_temp_folder/
 # Ignore Visual Studio Code's working dir
 /.vscode/
+/node_modules
 # Ignore files output by build
 /[Bb]uild*/
 /[Bb]inary*/
