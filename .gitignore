@@ -1,23 +1,24 @@
-# Ignore image thumbnail files created by windows
-Thumbs.db
-# Ignore Finder view option files created by OS X
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-# Ignore various files created by visual studio/msbuild
-*.ipch
-*.opensdf
-*.sdf
 *.suo
-*.vcxproj.user
-*.obj
-*.tlog
-*.VC.opendb
-*.VC.db
-.vs*/
-/Source/enc_temp_folder/
-# Ignore Visual Studio Code's working dir
-/.vscode/
-/node_modules
-# Ignore files output by build
-/[Bb]uild*/
-/[Bb]inary*/
-/obj/
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
