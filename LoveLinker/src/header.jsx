@@ -2,7 +2,8 @@ function Header() {
 
     return(
         <header>
-            <h1> love Linker</h1>
+            <h1> Love Linker</h1>
+            <t>Login</t>
             <hr></hr>
 
         </header>
