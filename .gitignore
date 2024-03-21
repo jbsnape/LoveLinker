@@ -156,3 +156,4 @@ dist
 .pack
 .eslintcache
 index.pack.old
+.cache
