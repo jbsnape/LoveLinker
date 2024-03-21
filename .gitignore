@@ -153,6 +153,7 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+#Ignore chache files from leaking personal data
 node_modules/.cache/.eslintcache
 *.pack
 node_modules/.cache/default-development/index.pack.old
