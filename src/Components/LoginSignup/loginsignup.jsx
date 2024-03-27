@@ -6,7 +6,7 @@ import password_icon from '../Assets/password.png'
 
 const LoginSignup = () => {
     const [action, setAction] = useState("Sign Up");
-    const initialValues = {username:"", email:"", password:""}
+    const initialValues = {name:"", email:"", password:""}
     const [formValues, setFormValues] = useState(initialValues);
     const [formErrors, setFormErrors] = useState({});
     const [isSubmit, setIsSubmit] = useState(false);
@@ -16,15 +16,29 @@ const LoginSignup = () => {
         setFormValues({...formValues, [name]:value});
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const errors = validate(formValues);
         setFormErrors(errors);
         if (Object.keys(errors).length === 0) {
             console.log(formValues);
             // Here you can put the code to submit the form values to the server
+            const url = 'http://localhost:5000/users/add';
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formValues)
+            });
+            if (response.ok) {
+                console.log('New user created successfully');
+            } else {
+                console.log('Error creating new user');
+            }
         }
     };
+    
     
     
     useEffect(() => {
@@ -40,8 +54,8 @@ const LoginSignup = () => {
         const errors = {};
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     
-        if (!values.username){
-            errors.username = "Username is required!"
+        if (!values.name){
+            errors.name = "Name is required!"
         }
     
         if (!values.email){
@@ -53,10 +67,6 @@ const LoginSignup = () => {
         return errors;
     };
     
-    
-
-    
-
     return (
         <div className="container">
             {/* <pre>{JSON.stringify(formValues, undefined, 2)}</pre>  */}
@@ -68,8 +78,8 @@ const LoginSignup = () => {
                 <div className='inputs'>
                     {action==="Login"?<div></div>:<div className='input'>
                         <img src={user_icon} alt="" />
-                        <input type="text" placeholder='Name' name='username' value={formValues.username} onChange={handleChange}/>
-                        {formErrors.username && <div className='error'>{formErrors.username}</div>}
+                        <input type="text" placeholder='Name' name='name' value={formValues.name} onChange={handleChange}/>
+                        {formErrors.name && <div className='error'>{formErrors.name}</div>}
                     </div>}
     
                     <div className='input'>

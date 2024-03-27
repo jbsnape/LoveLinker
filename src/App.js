@@ -8,6 +8,6 @@ function App() {
       <LoginSignup/>
     </div>
   );
-}
+  }
 
 export default App;
