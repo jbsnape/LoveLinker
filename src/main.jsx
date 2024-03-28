@@ -1,5 +1,7 @@
 import './main.css';
 import React, {useRef, useEffect, useState} from 'react';
+
+
 const MainPage =() => {
     const videoref = useRef(null);
     const photoref = useRef(null);
