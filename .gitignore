@@ -156,3 +156,4 @@ dist
 node_modules/.cache/.eslintcache
 *.pack
 node_modules/.cache/default-development/index.pack.old
+/node_modules
