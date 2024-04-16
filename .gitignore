@@ -97,6 +97,7 @@ web_modules/
 .yarn-integrity
 
 # dotenv environment variable files
+.env
 .env.development.local
 .env.test.local
 .env.production.local
@@ -156,4 +157,3 @@ dist
 node_modules/.cache/.eslintcache
 *.pack
 node_modules/.cache/default-development/index.pack.old
-/node_modules
